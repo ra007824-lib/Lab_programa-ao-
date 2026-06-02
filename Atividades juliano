@@ -1,0 +1,107 @@
+ATV01
+#vetor = lista(onde guarda informações)
+#contar quantas vezes os lados de (1-6) = guardar em um segundo vetor
+#Imprimir
+import random
+lista1 = []
+lista2 = [0, 0, 0, 0, 0, 0] #guardar contagem de cada face, no começo a face caiu 0 vezes, então vai ser [0,0,0,0,0,0]
+
+lancamentos=[]
+for i in range(100):
+    resultado=random.randint(1,6)
+    lancamentos.append(resultado)
+
+frequencia = []
+for face in range(1,7):
+    quantidade = lancamentos.count(face)
+    frequencia.append(quantidade)
+print(lancamentos)
+print("\nVetor de Frequências(Quantidade de vezes das faces: 1,2,3,4,5,6)")
+print(frequencia)
+
+
+ATV02
+notas=[2.5,7.5,10.0,4.0] #Vetor
+
+soma=0
+
+for nota in notas:
+    soma+=nota #soma= soma+nota (0+2.5+4.0....)
+media=soma/len(notas)
+
+proximo_media = notas[0]
+menor_distancia = abs(notas[0] - media)
+for nota in notas:
+    dist_atual = abs(nota - media)
+    if dist_atual < menor_distancia:
+        menor_distancia = dist_atual
+        proximo_media = nota
+
+
+print(f"Vetor: {notas}")
+print(f"Média: {media:.1f}")
+print(f"Mais próximo da média: {proximo_media}")
+
+
+ATV03
+#Dado duas listas de tamanhos diferentes, percorra ambas e intercale seus elementos numa terceira lista. 
+#A terceira lista deve começar pelo primeiro elemento da lista menor, e ao fim da lista menor,
+#os elementos restantes da lista maior são adicionados no final.
+lista1=[1,2,3,4]
+lista2=[10,20,30,40,50,60]
+lista_intercalada=[]
+
+if len(lista1) < len(lista2):
+    menor, maior = lista1, lista2
+else:
+    menor, maior = lista2, lista1
+
+for i in range(len(menor)):
+    if (i < len(menor)):
+        lista_intercalada.append(menor[i])
+    lista_intercalada.append(maior[i]) #range= Ele gera uma sequência de números para o for contar. Em vez de percorrer os elementos de uma lista, você percorre posições numéricas.
+print(f"lista1: {lista1}")
+print(f"lista2: {lista2}")
+print(f"Lista_intercalada: {lista_intercalada}")
+
+
+ATV04
+notas = []
+for i in range(5):
+    notas = float(input(f"digite a nota do aluno {i+1}"))
+    notas.append(notas)
+menor_nota = min(notas)
+notas.remove(menor_nota)
+print(f"A menor nota removida foi:{menor_nota}")
+print(f"Notas que restaram no sistema{notas}")
+notas.append(menor_nota)
+
+
+ATV05
+numeros = []
+for i in range (6):
+    numero = int(input("digite o {i+1}. numero:"))
+    numeros.append[numero]
+
+numeros = [int(input("Digite o {i+1}.numero:"))for i in range(6)]
+x = int(input("/nqual o numero deseja pesquisar?"))
+ocorrencias = numeros.count(x)
+print('-'*30)
+if ocorrencias >0:
+    print(f"O numero {x} aparece {ocorrencias}vez (es) na lista.")
+    print(f"Sua primeira aparição foi no indice:{numeros.index(x)}")
+else :
+    print(f"O numero {x}nao foi encontrado na lista.")
+
+
+ATV06
+nomes_originais = []
+for i in range(5):
+    nome = input(f"Digite o {i+1} nome:")
+    nomes_originais.append(nome)
+nomes_invertidos = []
+for i in range(1,6):
+    nomes_invertidos.append(nomes_originais[-1])
+
+print(f"\nLista original: {nomes_originais}")
+print(f"\nLista invertida: {nomes_invertidos}")
