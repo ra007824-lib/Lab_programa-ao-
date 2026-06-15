@@ -105,3 +105,39 @@ for i in range(1,6):
 
 print(f"\nLista original: {nomes_originais}")
 print(f"\nLista invertida: {nomes_invertidos}")
+
+
+ATV07
+pares = []
+impares = []
+
+while len(pares) + len(impares) < 10:
+    num = int(input("Digite um número inteiro: "))
+
+    if num in pares or num in impares:
+        print("Número já inserido! Digite outro.")
+        continue
+
+    if num % 2 == 0:
+        pares.append(num)
+    else:
+        impares.append(num)
+
+print("\nLista de pares:", pares)
+print("Lista de ímpares:", impares)
+
+
+ATV08
+frase = input("digite uma frase: " )+""
+palavra_atual = " "
+lista_palavra = []
+
+for caractere in frase: 
+    if caractere !=" ":
+        palavra_atual +=caractere 
+    else:
+        if palavra_atual !="":
+            lista_palavra.append(palavra_atual)
+            palavra_atual=""
+print(f"vetor de palavras gerado:{lista_palavra}")
+
