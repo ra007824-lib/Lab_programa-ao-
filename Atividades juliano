@@ -160,3 +160,6 @@ saldo_final = sum(historico)
 print("-"*30)
 print(f"Histórico filtrado: {historico} ")
 print(f"Salto final do caixa: R$ {saldo_final:.2f}")
+
+
+
